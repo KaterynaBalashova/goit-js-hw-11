@@ -20,6 +20,7 @@ function handleSubmit(event) {
         .then(data => {
             if (data.hits.length > 0) {
                 createGallery(data.hits);
+                inputEl.value = "";
             } else {
                 iziToast.error({
                     title: "Error",
